@@ -6,7 +6,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const ASSET_PATH = process.env.ASSET_PATH || "/";
 
 module.exports = {
-  entry: path.resolve(__dirname, "./src/index.jsx"),
+  entry: path.resolve(__dirname, "./src/index.js"),
   resolve: {
     extensions: [".js", ".jsx"],
   },
@@ -15,14 +15,14 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loaders: "babel-loader",
+        loader: "babel-loader",
       },
       {
         test: /\.(png|jpg|gif)$/,
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
-          outputPath: "assets/img",
+          outputPath: "assets/images",
         },
       },
       {
@@ -38,13 +38,12 @@ module.exports = {
       template: path.resolve(__dirname, "./src/index.html"),
       inject: "head",
       scriptLoading: "defer",
-      favicon: path.resolve(__dirname, "./src/favicon.ico"),
     }),
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "./src/assets/img"),
-          to: path.resolve(__dirname, "./public/assets/img"),
+          from: path.resolve(__dirname, "./src/assets/images"),
+          to: path.resolve(__dirname, "./public/assets/images"),
         },
       ],
     }),

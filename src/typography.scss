@@ -1,0 +1,69 @@
+@import "./base";
+
+html {
+  font-size: 100px;
+}
+
+body {
+  font-family: var(--san-serif-font);
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 0.4rem;
+}
+
+h2 {
+  font-size: 0.22rem;
+}
+
+h3 {
+  font-size: 0.18rem;
+}
+
+h4 {
+  font-size: 0.16rem;
+}
+
+h5 {
+  font-size: 0.14rem;
+}
+
+h6 {
+  font-size: 0.12rem;
+}
+
+p,
+span {
+  font-size: 0.1rem;
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+  html {
+    font-size: 110px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  html {
+    font-size: 120px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  html {
+    font-size: 130px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-xl) {
+  html {
+    font-size: 140px;
+  }
+}
+
+// @media screen and (min-width: $breakpoint-xxl) {
+//   html {
+//     font-size: 150px;
+//   }
+// }
