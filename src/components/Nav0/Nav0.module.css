@@ -1,0 +1,40 @@
+.pagehead {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  z-index: 10;
+}
+
+.pagehead_con {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logolink {
+  display: flex;
+}
+
+.menu {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu::before,
+menu::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  right: 0;
+  background: #212529;
+  transition: 0.3s ease-in-out;
+}

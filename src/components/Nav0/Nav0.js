@@ -1,24 +1,20 @@
 import React from "react";
+import style from "./Nav0.module.css";
+import data from "./Data";
 
 const nav = () => {
   return (
-    <>
-      <input
-        type={`checkbox`}
-        id={`nav-toggle`}
-        name={`nav-toggle`}
-        value={`show`}
-      ></input>
-      <header>
-        <div className={`container`}>
-          <a href={`/`} className={`current-page`}></a>
-          <label for={`nav-toggle`}>
-            <span></span>
-          </label>
-        </div>
-        <nav className={`container`}></nav>
-      </header>
-    </>
+    <header className={style.pagehead}>
+      <div className={`container-fluid ${style.pagehead_con}`}>
+        <a href={`/`} className={style.logolink}>
+          <img src={data.image} />
+        </a>
+        <button className={style.menu}>
+          <span></span>
+        </button>
+      </div>
+      <nav className={`container`}></nav>
+    </header>
   );
 };
 

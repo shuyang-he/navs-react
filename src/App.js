@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Nav0 from "./components/Nav0/Nav0";
 
 class App extends Component {
   render() {
@@ -7,7 +8,7 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact>
-            Main Page
+            <Nav0 />
           </Route>
           <Route path="*">Not Found</Route>
         </Switch>
